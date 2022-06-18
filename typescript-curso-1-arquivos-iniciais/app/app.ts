@@ -10,5 +10,5 @@ form.addEventListener('submit', event => {
     // Por padrão o Javascript recarrega a página após um submit. A execução do método
     // preventDefault() elimina esse comportamento.
     event.preventDefault();
-    controller.adiciona();
+    controller.adicionar();
 })

@@ -5,7 +5,8 @@
         "noEmitOnError": true,
         // A propriedade abaixo desabilita o comportamento default do Typescript de assumir
         // que objetos possam receber qualquer valor.
-        "noImplicitAny": true     },
+        "noImplicitAny": true 
+    },
     "include": [
         "app/**/*"
     ]
