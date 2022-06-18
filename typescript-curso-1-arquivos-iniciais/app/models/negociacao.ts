@@ -1,29 +1,29 @@
 // A palavra reservada export torna a classe exportável e visível para outros módulos.
 export class Negociacao {
-    // O # à frente dos nomes dos atributos faz deles atributos privados.
-    #data;
-    #quantidade;
-    #valor;
+    // Transformando os atributos em privados
+    private _data;
+    private _quantidade;
+    private _valor;
 
     constructor(data, quantidade, valor) {
-        this.#data = data;
-        this.#quantidade = quantidade;
-        this.#valor = valor;
+        this._data = data;
+        this._quantidade = quantidade;
+        this._valor = valor;
     }
 
     get data() {
-        return this.#data;
+        return this._data;
     }
 
     get quantidade() {
-        return this.#quantidade
+        return this._quantidade
     }
 
     get valor() {
-        return this.#valor;
+        return this._valor;
     }
 
     get volume() {
-        return this.#quantidade * this.#valor;
+        return this._quantidade * this._valor;
     }
 }
