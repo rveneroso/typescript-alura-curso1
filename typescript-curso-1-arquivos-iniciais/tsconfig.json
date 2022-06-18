@@ -2,8 +2,10 @@
     "compilerOptions": {
         "outDir": "dist/js",
         "target": "ES6",
-        "noEmitOnError": true
-    },
+        "noEmitOnError": true,
+        // A propriedade abaixo desabilita o comportamento default do Typescript de assumir
+        // que objetos possam receber qualquer valor.
+        "noImplicitAny": true     },
     "include": [
         "app/**/*"
     ]
