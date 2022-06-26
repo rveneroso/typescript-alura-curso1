@@ -1,9 +1,12 @@
 // A palavra reservada export torna a classe exportável e visível para outros módulos.
 export class Negociacao {
-    constructor(data, quantidade, valor) {
-        this._data = data;
-        this._quantidade = quantidade;
-        this._valor = valor;
+    // Com a sintaxe abaixo no construtor o Typescript automaticamente cria as variáveis
+    // de classe _data, _quantidade e _valor com modificador de acesso private sem a necessidade
+    // de quaisquer declarações anteriores dessas variáveis.
+    constructor(_data, _quantidade, _valor) {
+        this._data = _data;
+        this._quantidade = _quantidade;
+        this._valor = _valor;
     }
     get data() {
         return this._data;
