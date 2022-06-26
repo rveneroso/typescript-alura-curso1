@@ -1,9 +1,11 @@
 import { Negociacao } from "../models/negociacao.js";
+import { Negociacoes } from "../models/negociacoes.js";
 
 export class NegociacaoController {
     private inputData: HTMLInputElement;
     private inputQuantidade: HTMLInputElement;
     private inputValor: HTMLInputElement;
+    private negociacoes = new Negociacoes();
 
     constructor() {
 
@@ -14,7 +16,8 @@ export class NegociacaoController {
 
     adicionar(): void {
         const negociacao = this.criarNegociacao();
-        alert('Dados salvos com sucesso!')
+        this.negociacoes.adiciona(negociacao);
+        alert(this.negociacoes.lista());
         this.limparFormulario();
         console.log(negociacao);
     }
